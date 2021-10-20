@@ -1,7 +1,7 @@
 ---
 # Demo ACI Playbook
 - name: Configuring Example Tenant
-  hosts: apic1
+  hosts: all
   connection: local
   gather_facts: no
 
