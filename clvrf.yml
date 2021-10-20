@@ -9,11 +9,11 @@
   - name: Create ansible-VRF
     aci_vrf:
       hostname: "{{ inventory_hostname }}"
-      username: ansible
-      private_key: ansible.key
-      tenant: "{{ tenant }}"
-      vrf: "{{ vrf }}"
-      description: "VRF configured by Ansible"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      tenant: "CiscoLive_AWX"
+      vrf: "cl_vrf"
+      description: "VRF configured by AWX"
       validate_certs: no
       state: present
 
