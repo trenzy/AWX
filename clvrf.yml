@@ -1,0 +1,19 @@
+---
+# Demo ACI Playbook
+- name: Configuring Example Tenant
+  hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Create ansible-VRF
+    aci_vrf:
+      hostname: "{{ inventory_hostname }}"
+      username: ansible
+      private_key: ansible.key
+      tenant: "{{ tenant }}"
+      vrf: "{{ vrf }}"
+      description: "VRF configured by Ansible"
+      validate_certs: no
+      state: present
+
