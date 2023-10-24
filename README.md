@@ -1,5 +1,11 @@
-<h1> Simple example for use with AWX. </h1>
+<h1> Simple example for use with AWX to create a Tenant. </h1>
 
-## <h2> Creating a Tenant in a lab environment using AWX </h2>
+This very basic playbook creates a Tenant in a lab environment using AWX. 
 
-### <h3> Add a VRF to the previously created Tenant </h3>
+It has a collections directory to specify which collections it should download for use by AWX. In this case, we are only downloading:
+
+```
+- cisco.aci
+```
+
+We are hardcoding the Tenant name. We would normally use a variable here for substituion.

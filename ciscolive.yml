@@ -1,15 +1,13 @@
 ---
-# Demo ACI Playbook
+# Demo ACI Playbook with AWX
 - name: Configuring Example Tenant
   hosts: all
   connection: local
   gather_facts: no
-  collections:
-  - cisco.aci
 
   tasks:
   - name: Create a New Tenant
-    aci_tenant:
+    cisco.aci.aci_tenant:
         hostname: "{{ inventory_hostname }}"
         username: "{{ username }}"
         password: "{{ password }}"
